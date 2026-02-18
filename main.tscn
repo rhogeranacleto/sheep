@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://dijtfwl2tsocv"]
+
+[ext_resource type="PackedScene" uid="uid://cuvydap0k7m1m" path="res://sheep.tscn" id="1_ig7tw"]
+[ext_resource type="PackedScene" uid="uid://cye7wk41lg0lu" path="res://hud.tscn" id="2_0xm2m"]
+
+[node name="Main" type="Node2D" unique_id=525405748]
+
+[node name="Sheep" parent="." unique_id=595068534 instance=ExtResource("1_ig7tw")]
+position = Vector2(197, 192)
+
+[node name="Sheep2" parent="." unique_id=607165236 instance=ExtResource("1_ig7tw")]
+position = Vector2(824, 427)
+
+[node name="Sheep3" parent="." unique_id=1539686548 instance=ExtResource("1_ig7tw")]
+position = Vector2(501, 178)
+
+[node name="HUD" parent="." unique_id=1298130721 instance=ExtResource("2_0xm2m")]

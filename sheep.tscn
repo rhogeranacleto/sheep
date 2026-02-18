@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://cuvydap0k7m1m"]
+
+[ext_resource type="Texture2D" uid="uid://c8ygho3jl04c" path="res://sheep-sprite.webp" id="1_0sl4e"]
+[ext_resource type="Script" uid="uid://3o218820ksl8" path="res://sheep.gd" id="1_xqjq8"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_xqjq8"]
+radius = 71.50992
+height = 238.70956
+
+[node name="Sheep" type="Area2D" unique_id=595068534]
+script = ExtResource("1_xqjq8")
+
+[node name="SheepSprite" type="Sprite2D" parent="." unique_id=65479497]
+texture = ExtResource("1_0sl4e")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=27798805]
+rotation = 0.23212878
+shape = SubResource("CapsuleShape2D_xqjq8")
+
+[node name="WoolGrowthProgress" type="ProgressBar" parent="." unique_id=713101565]
+offset_left = -106.0
+offset_top = -161.0
+offset_right = 108.0
+offset_bottom = -134.0
+
+[node name="WoolGrowthTimer" type="Timer" parent="." unique_id=2038567175]
+wait_time = 5.0
+one_shot = true
+autostart = true

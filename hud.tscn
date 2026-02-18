@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://cye7wk41lg0lu"]
+
+[ext_resource type="Script" uid="uid://crgvvh1etgpla" path="res://hud.gd" id="1_37p78"]
+
+[node name="HUD" type="Control" unique_id=1298130721]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_37p78")
+
+[node name="Container" type="HBoxContainer" parent="." unique_id=509073445]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="WoolLabel" type="Label" parent="Container" unique_id=841280604]
+layout_mode = 2
+text = "La"
+
+[node name="WoolValue" type="Label" parent="Container" unique_id=409903448]
+layout_mode = 2
+text = "0"

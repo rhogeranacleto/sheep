@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://c8ygho3jl04c" path="res://sheep-sprite.webp" id="1_0sl4e"]
 [ext_resource type="Script" uid="uid://3o218820ksl8" path="res://sheep.gd" id="1_xqjq8"]
+[ext_resource type="Texture2D" uid="uid://dqhe0hy17b6km" path="res://sheep.png" id="3_qhocy"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_xqjq8"]
 radius = 71.50992
@@ -13,10 +14,12 @@ monitorable = false
 script = ExtResource("1_xqjq8")
 
 [node name="SheepSprite" type="Sprite2D" parent="." unique_id=65479497]
+visible = false
 scale = Vector2(0.295, 0.295)
 texture = ExtResource("1_0sl4e")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=27798805]
+visible = false
 scale = Vector2(0.295, 0.295)
 shape = SubResource("CapsuleShape2D_xqjq8")
 
@@ -32,3 +35,8 @@ one_shot = true
 
 [node name="EatingTimer" type="Timer" parent="." unique_id=159148086]
 one_shot = true
+
+[node name="Sheep" type="Sprite2D" parent="." unique_id=965433407]
+position = Vector2(9, -8)
+scale = Vector2(0.16796875, 0.16796875)
+texture = ExtResource("3_qhocy")

@@ -64,3 +64,8 @@ tile_map_data = PackedByteArray("AAARAAYAAgAAAAAAAAAIAAoAAgAAAAAAAAAPAAsAAgAAAAA
 tile_set = SubResource("TileSet_e0an3")
 script = ExtResource("2_wijl4")
 tilesize = Vector2i(20, 12)
+
+[node name="SpawnBushTimer" type="Timer" parent="." unique_id=1550775153]
+autostart = true
+
+[connection signal="timeout" from="SpawnBushTimer" to="." method="_on_spawn_bush_timer_timeout"]

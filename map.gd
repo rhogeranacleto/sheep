@@ -23,14 +23,20 @@ func get_closes_grass_to_vector(pos: Vector2) -> Vector2:
 
 func randomize_bush():
 	for i in range(100):
-		var bush = Bush.instanciate()
+		generate_one_bush()
+
+func generate_one_bush():
+	var bush = Bush.instanciate()
 		
-		var used_rect = floor.get_used_rect()
-		var x = randi_range(used_rect.position.x, used_rect.position.x + (used_rect.size.x * floor.tile_set.tile_size.x) -1)
-		var y = randi_range(used_rect.position.y, used_rect.position.y + (used_rect.size.y * floor.tile_set.tile_size.y) -1)
-		var position = Vector2(x, y)
-		
-		bush.global_position = position
-		
-		add_child(bush)
+	var used_rect = floor.get_used_rect()
+	var x = randi_range(used_rect.position.x, used_rect.position.x + (used_rect.size.x * floor.tile_set.tile_size.x) -1)
+	var y = randi_range(used_rect.position.y, used_rect.position.y + (used_rect.size.y * floor.tile_set.tile_size.y) -1)
+	var position = Vector2(x, y)
 	
+	bush.global_position = position
+	
+	add_child(bush)
+
+
+func _on_spawn_bush_timer_timeout() -> void:
+	generate_one_bush()

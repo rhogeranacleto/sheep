@@ -8,22 +8,27 @@ radius = 71.50992
 height = 238.70956
 
 [node name="Sheep" type="Area2D" unique_id=595068534]
+collision_mask = 2
+monitorable = false
 script = ExtResource("1_xqjq8")
 
 [node name="SheepSprite" type="Sprite2D" parent="." unique_id=65479497]
+scale = Vector2(0.295, 0.295)
 texture = ExtResource("1_0sl4e")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=27798805]
-rotation = 0.23212878
+scale = Vector2(0.295, 0.295)
 shape = SubResource("CapsuleShape2D_xqjq8")
 
 [node name="WoolGrowthProgress" type="ProgressBar" parent="." unique_id=713101565]
-offset_left = -106.0
-offset_top = -161.0
-offset_right = 108.0
-offset_bottom = -134.0
+offset_left = -77.0
+offset_top = -70.0
+offset_right = 81.0
+offset_bottom = -43.0
 
 [node name="WoolGrowthTimer" type="Timer" parent="." unique_id=2038567175]
 wait_time = 5.0
 one_shot = true
-autostart = true
+
+[node name="EatingTimer" type="Timer" parent="." unique_id=159148086]
+one_shot = true

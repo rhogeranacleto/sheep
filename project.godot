@@ -19,10 +19,18 @@ config/icon="res://icon.svg"
 
 SignalBus="*uid://c8syf854v6kfq"
 
+[dotnet]
+
+project/assembly_name="ovelha"
+
 [editor]
 
 version_control/plugin_name="GitPlugin"
 version_control/autoload_on_startup=true
+
+[global_group]
+
+bush=""
 
 [input]
 
@@ -31,6 +39,11 @@ click={
 "events": [Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"button_mask":1,"position":Vector2(233, 12),"global_position":Vector2(242, 60),"factor":1.0,"button_index":1,"canceled":false,"pressed":true,"double_click":false,"script":null)
 ]
 }
+
+[layer_names]
+
+2d_physics/layer_1="sheep"
+2d_physics/layer_2="bush"
 
 [physics]
 

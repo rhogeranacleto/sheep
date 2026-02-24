@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dqhe0hy17b6km"
-path="res://.godot/imported/sheep.png-f8b610ae028efa292db463333a6a634e.ctex"
+uid="uid://bqwx7mi72fiyb"
+path="res://.godot/imported/sheep segunda tentativa.png-54807ac50e4a765c130875188a04c068.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sheep.png"
-dest_files=["res://.godot/imported/sheep.png-f8b610ae028efa292db463333a6a634e.ctex"]
+source_file="res://sheep segunda tentativa.png"
+dest_files=["res://.godot/imported/sheep segunda tentativa.png-54807ac50e4a765c130875188a04c068.ctex"]
 
 [params]
 

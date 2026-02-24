@@ -3,6 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://bf6xkpomsejfg" path="res://map.tscn" id="1_h2yge"]
 [ext_resource type="PackedScene" uid="uid://cuvydap0k7m1m" path="res://sheep.tscn" id="1_ig7tw"]
 [ext_resource type="PackedScene" uid="uid://cye7wk41lg0lu" path="res://hud.tscn" id="2_0xm2m"]
+[ext_resource type="PackedScene" uid="uid://bv73ko2u0c53c" path="res://sheep/sheep.tscn" id="4_1bvp3"]
 
 [node name="Main" type="Node2D" unique_id=525405748]
 
@@ -18,3 +19,7 @@ position = Vector2(824, 427)
 position = Vector2(501, 178)
 
 [node name="HUD" parent="." unique_id=1298130721 instance=ExtResource("2_0xm2m")]
+
+[node name="Sheep4" parent="." unique_id=394776693 instance=ExtResource("4_1bvp3")]
+position = Vector2(92, 33)
+scale = Vector2(0.255, 0.255)

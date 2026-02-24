@@ -2,13 +2,14 @@
 
 [ext_resource type="Texture2D" uid="uid://c8ygho3jl04c" path="res://sheep-sprite.webp" id="1_0sl4e"]
 [ext_resource type="Script" uid="uid://3o218820ksl8" path="res://sheep.gd" id="1_xqjq8"]
-[ext_resource type="Texture2D" uid="uid://dqhe0hy17b6km" path="res://sheep.png" id="3_qhocy"]
+[ext_resource type="Texture2D" uid="uid://dqhe0hy17b6km" path="res://sheep2.png" id="3_qhocy"]
+[ext_resource type="Texture2D" uid="uid://bqwx7mi72fiyb" path="res://sheep segunda tentativa.png" id="4_y540r"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_xqjq8"]
 radius = 71.50992
 height = 238.70956
 
-[node name="Sheep" type="Area2D" unique_id=595068534]
+[node name="Sheep2" type="Area2D" unique_id=595068534]
 collision_mask = 2
 monitorable = false
 script = ExtResource("1_xqjq8")
@@ -37,6 +38,11 @@ one_shot = true
 one_shot = true
 
 [node name="Sheep" type="Sprite2D" parent="." unique_id=965433407]
+visible = false
 position = Vector2(9, -8)
 scale = Vector2(0.16796875, 0.16796875)
 texture = ExtResource("3_qhocy")
+
+[node name="SheepSegundaTentativa" type="Sprite2D" parent="." unique_id=709052604]
+scale = Vector2(0.07436708, 0.07436708)
+texture = ExtResource("4_y540r")

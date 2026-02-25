@@ -1,0 +1,83 @@
+[gd_scene format=3 uid="uid://yvd5qpt853pe"]
+
+[ext_resource type="Texture2D" uid="uid://hhr4l7qh00if" path="res://sheep/modular-sheep.png" id="1_0jjon"]
+
+[sub_resource type="SkeletonModification2DCCDIK" id="SkeletonModification2DCCDIK_vovqd"]
+target_nodepath = NodePath("../../Marker2D")
+tip_nodepath = NodePath("Leg/Leg2/Leg3/Leg4/Leg5")
+ccdik_data_chain_length = 4
+joint_data/0/bone_index = 3
+joint_data/0/bone2d_node = NodePath("Leg/Leg2/Leg3/Leg4")
+joint_data/0/rotate_from_joint = false
+joint_data/0/enable_constraint = false
+joint_data/0/editor_draw_gizmo = true
+joint_data/1/bone_index = 2
+joint_data/1/bone2d_node = NodePath("Leg/Leg2/Leg3")
+joint_data/1/rotate_from_joint = false
+joint_data/1/enable_constraint = true
+joint_data/1/constraint_angle_min = 0.0
+joint_data/1/constraint_angle_max = 360.0
+joint_data/1/constraint_angle_invert = false
+joint_data/1/constraint_in_localspace = true
+joint_data/1/editor_draw_gizmo = true
+joint_data/2/bone_index = 1
+joint_data/2/bone2d_node = NodePath("Leg/Leg2")
+joint_data/2/rotate_from_joint = false
+joint_data/2/enable_constraint = false
+joint_data/2/editor_draw_gizmo = true
+joint_data/3/bone_index = 0
+joint_data/3/bone2d_node = NodePath("Leg")
+joint_data/3/rotate_from_joint = false
+joint_data/3/enable_constraint = false
+joint_data/3/editor_draw_gizmo = true
+
+[sub_resource type="SkeletonModificationStack2D" id="SkeletonModificationStack2D_cief5"]
+enabled = true
+modification_count = 1
+modifications/0 = SubResource("SkeletonModification2DCCDIK_vovqd")
+
+[node name="CharacterBody2D" type="CharacterBody2D" unique_id=916002950]
+
+[node name="Polygon2D" type="Polygon2D" parent="." unique_id=2002789970]
+position = Vector2(245, 104)
+texture = ExtResource("1_0jjon")
+skeleton = NodePath("Skeleton2D")
+polygon = PackedVector2Array(552, 432, 760, 432, 760, -8, 560, -8, 584, 408, 616, 312.00003, 624, 256.00003, 624, 192, 624, 136, 616, 96, 616, 48.000004, 616, 16, 648, 0, 672, -8, 696.00006, 0, 728, 24, 720.00006, 48.000004, 712, 88, 712, 144, 712, 184, 712, 240, 712, 272, 712, 304, 736, 344.00003, 752.00006, 368.00003, 744.00006, 408, 664, 304, 664, 240, 672, 152, 672, 104.00001, 672, 80, 672, 168, 664, 224, 664, 320)
+polygons = [[0, 1, 4], [0, 4, 5], [7, 8, 9], [3, 9, 10], [3, 10, 11], [10, 11, 12], [3, 11, 12], [12, 13, 14], [2, 14, 15], [2, 15, 16], [14, 15, 16], [2, 16, 17], [2, 17, 18], [2, 18, 19], [21, 22, 23], [20, 21, 23], [2, 19, 24], [1, 2, 24], [19, 20, 24], [20, 23, 24], [23, 24, 25], [1, 4, 25], [1, 24, 25], [21, 22, 26], [5, 6, 26], [21, 26, 27], [6, 26, 27], [20, 21, 27], [8, 9, 29], [8, 28, 29], [17, 18, 29], [18, 28, 29], [9, 10, 30], [9, 29, 30], [16, 17, 30], [17, 29, 30], [12, 14, 30], [14, 16, 30], [10, 12, 30], [7, 8, 31], [8, 28, 31], [18, 19, 31], [18, 28, 31], [19, 31, 32], [7, 31, 32], [6, 7, 32], [6, 27, 32], [19, 20, 32], [20, 27, 32], [4, 5, 33], [5, 26, 33], [22, 23, 33], [22, 26, 33], [4, 25, 33], [23, 25, 33]]
+bones = ["Leg", PackedFloat32Array(0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0), "Leg/Leg2", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0), "Leg/Leg2/Leg3", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0), "Leg/Leg2/Leg3/Leg4", PackedFloat32Array(0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0), "Leg/Leg2/Leg3/Leg4/Leg5", PackedFloat32Array(1, 1, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1)]
+internal_vertex_count = 30
+
+[node name="Skeleton2D" type="Skeleton2D" parent="Polygon2D" unique_id=2138535591]
+position = Vector2(669, 44)
+modification_stack = SubResource("SkeletonModificationStack2D_cief5")
+
+[node name="Leg" type="Bone2D" parent="Polygon2D/Skeleton2D" unique_id=379558087]
+rest = Transform2D(1, 0, 0, 1, 0, 0)
+metadata/_local_pose_override_enabled_ = true
+
+[node name="Leg2" type="Bone2D" parent="Polygon2D/Skeleton2D/Leg" unique_id=290164204]
+position = Vector2(0, 50)
+rest = Transform2D(1, 0, 0, 1, 0, 50)
+metadata/_local_pose_override_enabled_ = true
+
+[node name="Leg3" type="Bone2D" parent="Polygon2D/Skeleton2D/Leg/Leg2" unique_id=1046355962]
+position = Vector2(1, 64)
+rest = Transform2D(1, 0, 0, 1, 1, 64)
+metadata/_local_pose_override_enabled_ = true
+
+[node name="Leg4" type="Bone2D" parent="Polygon2D/Skeleton2D/Leg/Leg2/Leg3" unique_id=747157850]
+position = Vector2(-2, 69)
+rest = Transform2D(1, 0, 0, 1, -2, 69)
+metadata/_local_pose_override_enabled_ = true
+
+[node name="Leg5" type="Bone2D" parent="Polygon2D/Skeleton2D/Leg/Leg2/Leg3/Leg4" unique_id=522694403]
+position = Vector2(-1, 59)
+rotation = 1.6048365
+rest = Transform2D(-0.034033563, 0.9994207, -0.9994207, -0.034033563, -1, 59)
+auto_calculate_length_and_angle = false
+length = 49.307
+bone_angle = 0.0
+
+[node name="Marker2D" type="Marker2D" parent="." unique_id=657584170]
+position = Vector2(637, 320.00003)
+rotation = -2.4945521

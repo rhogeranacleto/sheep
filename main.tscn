@@ -22,4 +22,6 @@ position = Vector2(501, 178)
 
 [node name="Sheep4" parent="." unique_id=394776693 instance=ExtResource("4_1bvp3")]
 position = Vector2(92, 33)
-scale = Vector2(0.255, 0.255)
+
+[node name="Sheep5" parent="." unique_id=31091758 instance=ExtResource("4_1bvp3")]
+position = Vector2(223, 318)

@@ -1,10 +1,13 @@
 extends Node2D
 
+@export var speed := 20.0
+
 @onready var clickable_area: Area2D = $BodySprite/Torso/Area2D
 @onready var body_sprite: Node2D = $BodySprite
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
 @onready var bush_feeding_area: Area2D = $BushFeedingArea
 @onready var line_2d: Line2D = $Line2D
+@onready var torso: Polygon2D = $BodySprite/Torso
 
 const SPEED = 300.0
 const JUMP_VELOCITY = -400.0
@@ -35,8 +38,8 @@ func _process(delta: float) -> void:
 		var target_destination = nearest.global_position - (bush_feeding_area.global_position - global_position)
 		
 		line_2d.set_point_position(1, to_local(nearest.global_position))
-		print (target_destination)
-		global_position = global_position.move_toward(target_destination, delta * 20)
+		
+		global_position = global_position.move_toward(target_destination, delta * speed)
 		return
 	
 	
@@ -49,6 +52,7 @@ func _process(delta: float) -> void:
 func eat(bush_area: Area2D):
 	animation_player.play('eat')
 	await animation_player.animation_finished
+	torso.scale.y = minf(torso.scale.y + 0.1, 1.8)
 	bush_area.get_parent().queue_free()
 	pass
 

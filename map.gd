@@ -22,7 +22,7 @@ func get_closes_grass_to_vector(pos: Vector2) -> Vector2:
 	return pos
 
 func randomize_bush():
-	for i in range(100):
+	for i in range(10):
 		generate_one_bush()
 
 func generate_one_bush():

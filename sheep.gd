@@ -49,14 +49,8 @@ func eat(bush_area: Area2D):
 func move_to_the_nearest_bush(delta: float):
 	var bushes = get_tree().get_nodes_in_group('bush')
 	
-	var nearest: Node2D = bushes.reduce(find_nearest_to_the_position.bind(global_position))
+	var nearest: Node2D = bushes.reduce(Helpers.find_nearest_to_the_position.bind(global_position))
 	
 	global_position = global_position.move_toward(nearest.global_position, delta * 20)
 	
 	pass
-	
-func find_nearest_to_the_position(nearest: Node2D, current: Node2D, position: Vector2) -> Node2D:
-	var nearest_distance = nearest.global_position.distance_to(position)
-	var current_distance = current.global_position.distance_to(position)
-	
-	return nearest if nearest_distance < current_distance else current

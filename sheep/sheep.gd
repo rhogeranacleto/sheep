@@ -25,6 +25,9 @@ func _process(delta: float) -> void:
 		return
 	
 	if bush_feeding_area.get_overlapping_areas().is_empty():
+		if not animation_player.current_animation == 'walk':
+			animation_player.play("walk")
+		
 		var bushes = get_tree().get_nodes_in_group('bush')
 	
 		var nearest: Node2D = bushes.reduce(Helpers.find_nearest_to_the_position.bind(bush_feeding_area.global_position))
@@ -36,16 +39,17 @@ func _process(delta: float) -> void:
 		global_position = global_position.move_toward(target_destination, delta * 20)
 		return
 	
-	if not animation_player.is_playing():
-		var first = bush_feeding_area.get_overlapping_areas().get(0)
-		
-		eat(first)
+	
+	var first = bush_feeding_area.get_overlapping_areas().get(0)
+	
+	eat(first)
 	
 	pass
 
 func eat(bush_area: Area2D):
-	bush_area.get_parent().queue_free()
 	animation_player.play('eat')
+	await animation_player.animation_finished
+	bush_area.get_parent().queue_free()
 	pass
 
 func _on_hovered(is_hover: bool) -> void:
